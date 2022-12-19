@@ -62,6 +62,12 @@ export const authSlice = createSlice({
       state.user = undefined;
       state.status = "idle";
     },
+    reset: (state) => {
+      if (state.status === "failed") {
+        state.error = undefined;
+        state.status = "idle";
+      }
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(loginAsync.pending, (state) => {
@@ -79,4 +85,4 @@ export const authSlice = createSlice({
   },
 });
 
-export const { logout } = authSlice.actions;
+export const { logout, reset } = authSlice.actions;
