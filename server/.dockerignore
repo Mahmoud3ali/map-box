@@ -1,0 +1,2 @@
+# ignore node_modules so that it's built on the host machine to avoid issues with different OS
+node_modules
