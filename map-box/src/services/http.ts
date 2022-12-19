@@ -1,9 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 
-const serverPort = process.env.REACT_APP_API_URL || 7123;
-const axiosInstance: AxiosInstance = axios.create({
-  baseURL: `http://127.0.0.1:${serverPort}/`,
-});
+const baseURL = process.env.REACT_APP_API_URL || "http://localhost:7123";
+const axiosInstance: AxiosInstance = axios.create({ baseURL });
 
 const init = (callback: (axios: AxiosInstance) => void) => {
   callback(axiosInstance);

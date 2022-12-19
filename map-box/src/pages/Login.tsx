@@ -31,8 +31,6 @@ export default function LoginPage() {
 
   const from = useLocation().state?.from?.pathname || "/";
 
-  console.log(auth);
-
   return (
     <Container component="main">
       <Box
