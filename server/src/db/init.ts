@@ -8,7 +8,7 @@ import { users } from "./seeds";
 
 const initiateUsers = async () => {
   // drop all users and initiate them again
-  await User.remove({});
+  await User.deleteMany({});
   await User.insertMany(users);
 };
 const initiatePolygons = async () => {
@@ -25,7 +25,7 @@ const initiatePolygons = async () => {
     };
   });
   // drop all polygons and initiate them again
-  await Polygon.remove({});
+  await Polygon.deleteMany({});
   // using slice to insert only 100 polygons
   // to avoid performance issues, if we are to to insert all polygons we will need to implement pagination & search server side
   await Polygon.insertMany(polygons);
