@@ -11,7 +11,7 @@ services:
       - target: $MONGODB_DOCKER_PORT
         host_ip: 127.0.0.1
         # expose mongodb port to host to allow connection on db client
-        published: 6060
+        published: $MONGODB_EXPOSED_PORT
         protocol: tcp
         mode: host
     volumes:
