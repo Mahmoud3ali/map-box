@@ -22,3 +22,6 @@
 **/npm-debug.log*
 **/yarn-debug.log*
 **/yarn-error.log*
+
+# ignoring .env files in root directory, commented out to allow .env files in root directory to ease cloning and running the project
+# .env
