@@ -1,4 +1,5 @@
 import { Schema, model, Document } from "mongoose";
+import validator from "validator";
 import bcrypt from "bcrypt";
 
 export interface IUser extends Document {
@@ -8,7 +9,13 @@ export interface IUser extends Document {
 
 const userSchema = new Schema<IUser>({
   password: { type: String, required: true, select: false },
-  email: { type: String, required: true, unique: true },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+    validate: [validator.isEmail, "do not match email regex"],
+  },
 });
 
 userSchema.pre("save", async function (next) {
