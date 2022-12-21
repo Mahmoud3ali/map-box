@@ -14,6 +14,7 @@ class DB {
 
   public async connect() {
     this.db = await MongoMemoryServer.create();
+    mongoose.set("strictQuery", true);
     await mongoose.connect(this.db.getUri());
 
     mongoose.connection.on("connected", () => {
