@@ -17,11 +17,11 @@ export default function UsersPage() {
   });
 
   if (listUsers.data === undefined) {
-    return <div>Loading...</div>;
+    return <div data-cy="users_page">Loading...</div>;
   }
 
   return (
-    <Box marginX="auto" marginTop="32px" maxWidth="650px">
+    <Box data-cy="users_page" marginX="auto" marginTop="32px" maxWidth="650px">
       <TableContainer component={Paper} sx={{ maxHeight: "450px" }}>
         <Table stickyHeader>
           <TableHead>

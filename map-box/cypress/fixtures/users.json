@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "_id": "63a30626fe15ce71f26d3028",
+      "email": "john@xyz.com",
+      "__v": 0
+    },
+    {
+      "_id": "63a30626fe15ce71f26d3029",
+      "email": "mike@xyz.com",
+      "__v": 0
+    }
+  ]
+}

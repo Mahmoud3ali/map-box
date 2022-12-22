@@ -5,10 +5,11 @@ type Props = {
   path: string;
   name: string;
 };
-export function NavItem({ path, name }: Props) {
+export function NavItem({ path, name, ...params }: Props) {
   const isMatch = useMatch(path);
   return (
     <MaterialLink
+      {...params}
       component={RouterLink}
       to={path}
       color="inherit"

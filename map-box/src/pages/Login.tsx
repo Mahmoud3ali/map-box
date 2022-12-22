@@ -32,7 +32,7 @@ export default function LoginPage() {
   const from = useLocation().state?.from?.pathname || "/";
 
   return (
-    <Container component="main">
+    <Container data-cy="login_page" component="main">
       <Box
         marginTop={"30vh"}
         display="flex"
@@ -55,6 +55,7 @@ export default function LoginPage() {
           marginTop={1}
         >
           <TextField
+            data-cy="email_input"
             margin="normal"
             fullWidth
             id="email"
@@ -72,6 +73,7 @@ export default function LoginPage() {
             {formState.errors.email?.message || auth.error}
           </FormHelperText>
           <TextField
+            data-cy="password_input"
             margin="normal"
             fullWidth
             label="Password"
@@ -85,6 +87,7 @@ export default function LoginPage() {
             {formState.errors.password?.message}
           </FormHelperText>
           <Button
+            data-cy="login_btn"
             type="submit"
             fullWidth
             variant="contained"

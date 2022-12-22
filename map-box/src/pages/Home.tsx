@@ -68,7 +68,7 @@ const _Map = ({ selectedPolygon }: { selectedPolygon?: RawPolygon }) => {
   });
 
   if (polygonsQuery.data === undefined) {
-    return <div>Loading map polygons...</div>;
+    return <div data-cy="home_page">Loading map polygons...</div>;
   }
 
   const staticLayers = new SolidPolygonLayer({
