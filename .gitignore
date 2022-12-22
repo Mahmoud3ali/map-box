@@ -25,3 +25,7 @@
 
 # ignoring .env files in root directory, commented out to allow .env files in root directory to ease cloning and running the project
 # .env
+
+# Cypress
+**/cypress/videos
+**/cypress/screenshots
